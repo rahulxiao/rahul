@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rAHUL bISWAS</title>
+    <title>Rahul Biswas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -20,20 +22,39 @@
             </div>
         </nav>
     </header>
-    <div class="banner">
+
+    <div class="banner" id="home">
         <h1>Hi, I'm Rahul Biswas</h1>
         <p>Game Developer</p>
     </div>
-   
-    <div class ="about-me">
+   <div class="profile">
+        <img src="raahul_biswas.JPG" alt="Rahul Biswas">
+    </div>
+    <div class="about-me" id="about">
         <h2>About Me</h2>
         <p>I’m Rahul Biswas, a Computer Science & Engineering graduate from American International University-Bangladesh with a deep passion for game development. I specialize in game mechanics, user experience, graphics programming, physics, AI, and sound design to create immersive gaming experiences.
             With a strong foundation in programming (C++, Java, C#, Python) and database management (MySQL, PL/SQL), I’ve honed my ability to tackle complex problems and manage projects efficiently. I have extensive experience working with version control systems, ensuring seamless collaboration and code integrity throughout the development process.
             I’m passionate about game development and eager to advance my career by tackling new challenges and contributing to innovative projects. My goal is to bring ideas to life and make a lasting impact in the gaming industry.
-            
         </p>
     </div>
-    <div class="education">
+    <div class="social-links">
+        <a href="https://github.com/yourgithub" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://twitter.com/yourtwitter" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="https://www.instagram.com/yourinstagram" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://www.facebook.com/yourfacebook" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="https://yourportfolio.com" target="_blank"><i class="fas fa-globe"></i> Portfolio</a>
+    </div> 
+    <div class="resume">
+        <h2>Resume</h2>
+        <button class="resume-btn">
+            <a href="Rahul_Biswas_Resume.pdf" download>Download Resume</a>
+        </button>
+    </div>  
+
+   
+
+    <div class="education" id="education">
         <h2>Education</h2>
         <div class="education-details">
             <div class="education-item">
@@ -57,7 +78,8 @@
             </div>
         </div>
     </div>
-    <div class="skills">
+
+    <div class="skills" id="skills">
         <h2>Skills</h2>
         <div class="skills-list">
             <div class="skill-item">
@@ -78,7 +100,8 @@
             </div>
         </div>
     </div>
-    <div class="projects">
+
+    <div class="projects" id="projects">
         <h2>Projects</h2>
         <div class="project-list">
             <div class="project-item">
@@ -123,26 +146,46 @@
             </div>
         </div>
     </div>    
-    <div class="experience">
+
+    <div class="experience" id="experience">
         <h2>Experience</h2>
         <div class="experience-list">
             <div class="experience-item">
-                <h3>Company 1</h3>
-                <p>Position</p>
-                <p>2019-2020</p>
+                <h3>Deepchain Labs</h3>
+                <p>Contractor</p>
+                <p>Apr 2024 – Current</p>
             </div>
         </div>
     </div>
-    <div class="contact">
+
+    <div class="hobies">
+        <h2>Hobbies</h2>
+        <p>Playing Video Games</p>
+        <p>Listening Stories</p>
+        <p>Listening to Music</p>
+    </div>
+
+    <div class="contact" id="contact">
         <h2>Contact</h2>
-        <p>Email:rahulbiswasaiub@gmail.com</p>
+        <p>Email: rahulbiswasaiub@gmail.com</p>
         <p>Phone: +880 1735355511</p>
     </div>
+
+    <div class="contact-form">
+        <h2>Send a Message</h2>
+        <fieldset>
+            <legend>Get in Touch</legend>
+            <form action="#contact" method="POST">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Message" required></textarea>
+                <button type="submit" name="submit">Send</button>
+            </form>
+        </fieldset>
+    </div>
+
     <footer>
         <p>&copy; 2020 Rahul Biswas</p>
     </footer>
-
-
-    
 </body>
 </html>
