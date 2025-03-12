@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -22,37 +24,48 @@
             </div>
         </nav>
     </header>
+    <div class="light-mode-toggle">
+        <input type="checkbox" id="light-mode-toggle">
+        <label for="light-mode-toggle"></label>
+    </div>
 
     <div class="banner" id="home">
-        <h1>Hi, I'm Rahul Biswas</h1>
-        <p>Game Developer</p>
-    </div>
-   <div class="profile">
-        <img src="raahul_biswas.JPG" alt="Rahul Biswas">
+        <div class="banner-container">
+            <div class="banner-left">
+                <div class="banner-text">
+                    <h1>Hi, I'm Rahul Biswas</h1>
+                    <p>Game Developer</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/yourgithub" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/yourtwitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/yourinstagram" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/yourfacebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                </div>
+                <a href="Rahul_Biswas_Resume.pdf" download class="banner-resume-btn">Download Resume</a>
+            </div>
+            <div class="profile-image">
+                <img src="raahul_biswas.JPG" alt="Rahul Biswas">
+            </div>
+        </div>
     </div>
     <div class="about-me" id="about">
         <h2>About Me</h2>
-        <p>I’m Rahul Biswas, a Computer Science & Engineering graduate from American International University-Bangladesh with a deep passion for game development. I specialize in game mechanics, user experience, graphics programming, physics, AI, and sound design to create immersive gaming experiences.
-            With a strong foundation in programming (C++, Java, C#, Python) and database management (MySQL, PL/SQL), I’ve honed my ability to tackle complex problems and manage projects efficiently. I have extensive experience working with version control systems, ensuring seamless collaboration and code integrity throughout the development process.
-            I’m passionate about game development and eager to advance my career by tackling new challenges and contributing to innovative projects. My goal is to bring ideas to life and make a lasting impact in the gaming industry.
+        <p>I’m Rahul Biswas, a Computer Science & Engineering graduate from American International University-Bangladesh
+            with a deep passion for game development. I specialize in game mechanics, user experience, graphics
+            programming, physics, AI, and sound design to create immersive gaming experiences.
+            With a strong foundation in programming (C++, Java, C#, Python) and database management (MySQL, PL/SQL),
+            I’ve honed my ability to tackle complex problems and manage projects efficiently. I have extensive
+            experience working with version control systems, ensuring seamless collaboration and code integrity
+            throughout the development process.
+            I’m passionate about game development and eager to advance my career by tackling new challenges and
+            contributing to innovative projects. My goal is to bring ideas to life and make a lasting impact in the
+            gaming industry.
         </p>
     </div>
-    <div class="social-links">
-        <a href="https://github.com/yourgithub" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-        <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="https://twitter.com/yourtwitter" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
-        <a href="https://www.instagram.com/yourinstagram" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-        <a href="https://www.facebook.com/yourfacebook" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
-        <a href="https://yourportfolio.com" target="_blank"><i class="fas fa-globe"></i> Portfolio</a>
-    </div> 
-    <div class="resume">
-        <h2>Resume</h2>
-        <button class="resume-btn">
-            <a href="Rahul_Biswas_Resume.pdf" download>Download Resume</a>
-        </button>
-    </div>  
-
-   
 
     <div class="education" id="education">
         <h2>Education</h2>
@@ -116,7 +129,7 @@
                 </ul>
                 <button class="view-btn">View Project</button>
             </div>
-    
+
             <div class="project-item">
                 <h3>Multi-Model Travel Management System</h3>
                 <p><strong>Academic Project | Fall 2024 – 2025</strong></p>
@@ -130,7 +143,7 @@
                 </ul>
                 <button class="view-btn">View Project</button>
             </div>
-    
+
             <div class="project-item">
                 <h3>Echo Car Dealership with Chat System</h3>
                 <p><strong>Academic Project | Summer 2023 – 2024</strong></p>
@@ -145,7 +158,7 @@
                 <button class="view-btn">View Project</button>
             </div>
         </div>
-    </div>    
+    </div>
 
     <div class="experience" id="experience">
         <h2>Experience</h2>
@@ -187,5 +200,7 @@
     <footer>
         <p>&copy; 2020 Rahul Biswas</p>
     </footer>
+    <script src="script.js"></script>
 </body>
+
 </html>
