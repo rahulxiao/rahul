@@ -1,6 +1,6 @@
 # Personal Portfolio Website
 
-![Portfolio Preview](Assets/portfolio-preview.png)
+![Portfolio Preview](Assets/about_me.png)
 
 ## 🚀 Overview
 This is a **professional portfolio website** built using **HTML, CSS, and JavaScript**. It showcases my skills, projects, and experience in a modern, responsive, and visually appealing manner.
