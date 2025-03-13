@@ -99,16 +99,6 @@ nav {
     background: #3b565a5d;
     color: #0f172a;
 }
-/* Vertical Email Link on the Right */
-.mail-line {
-    position: fixed;
-    right: 40px; /* Distance from the right edge of the viewport */
-    bottom: 60px; /* Distance from the bottom edge of the viewport */
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center the items horizontally */
-    z-index: 1000; /* Ensure the email link is on top of other elements */
-}
 
 
 /* Social Links */
@@ -144,50 +134,115 @@ nav {
     width: 110%;
     left: -5%;
 }
-/* Email button container */
-.mail-btn {
-    color: #94a3b8; /* Default color for the email link */
-    font-size: 1.2em; /* Size of the email text */
-    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
-    text-decoration: none; /* Remove underlines */
+
+/* Vertical Email Link on the Right */
+.mail-line {
+    position: fixed;
+    right: 40px; /* Distance from the right edge of the viewport */
+    bottom: 60px; /* Distance from the bottom edge of the viewport */
     display: flex;
-    flex-direction: column-reverse; /* Stack the text on top of the icon */
-    justify-content: center; /* Center the content */
-    align-items: center; /* Align items horizontally */
-    gap: 10px; /* Space between the text and the icon */
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
 }
 
-/* Rotate the email text to be vertical (90 degrees) */
+/* Email button container */
+.mail-btn {
+    color: #94a3b8;
+    font-size: 1.2em;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Rotate the email text to be vertical */
 .mail {
-    margin: 110px 0; /* Adjust vertical spacing */
-    white-space: nowrap; /* Prevent text from wrapping */
-    transform: rotate(90deg); /* Rotate the text 90 degrees */
-    transform-origin: center; /* Rotate from the center */
-    display: inline-block; /* Ensure the text stays inline */
-    font-size: 14px; /* Adjust font size for better readability */
-    letter-spacing: 3px; /* Increase spacing between letters */
+    margin: 110px 0;
+    white-space: nowrap;
+    transform: rotate(90deg);
+    transform-origin: center;
+    display: inline-block;
+    font-size: 14px;
+    letter-spacing: 3px;
 }
 
 /* Email Icon Styling */
 .mail-btn i {
-    font-size: 1.5em; /* Adjust icon size */
-    color: #94a3b8; /* Default color */
+    font-size: 1.5em;
+    color: #94a3b8;
 }
 
 /* Hover effect */
 .mail-btn:hover {
-    color: #22d3ee; /* Color change on hover */
-    transform: translateY(-5px); /* Small upward movement */
+    color: #22d3ee;
+    transform: translateY(-5px);
 }
 
 /* Vertical line after the email link */
 .mail-line::after {
     content: '';
     display: block;
-    width: 1px; /* Width of the line */
-    height: 150px; /* Increased height to make the line bigger */
+    width: 1px;
+    height: 150px;
     margin-top: 10px;
-    background-color: #94a3b8; /* Line color */
+    background-color: #94a3b8;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .mail-line {
+        right: 20px; /* Adjust positioning for smaller screens */
+        bottom: 40px;
+    }
+
+    .mail-btn {
+        font-size: 1em; /* Reduce font size */
+        gap: 5px; /* Reduce spacing */
+    }
+
+    .mail {
+        font-size: 12px; /* Make the email text smaller */
+        letter-spacing: 2px; /* Adjust spacing */
+        margin: 90px 0; /* Adjust margin */
+    }
+
+    .mail-btn i {
+        font-size: 1.2em; /* Reduce icon size */
+    }
+
+    .mail-line::after {
+        height: 100px; /* Reduce the vertical line height */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .mail-line {
+        right: 10px;
+        bottom: 30px;
+    }
+
+    .mail-btn {
+        font-size: 0.9em;
+        gap: 3px;
+    }
+
+    .mail {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+        margin: 70px 0;
+    }
+
+    .mail-btn i {
+        font-size: 1em;
+    }
+
+    .mail-line::after {
+        height: 80px;
+    }
 }
 
 /* Vertical Social Links on the Left */
