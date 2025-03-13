@@ -44,7 +44,7 @@ rahul/
 ```
 
 ## 🎨 Customization
-- **Profile Image:** Replace `Assets/profile.png` with your own.
+- **Profile Image:** Replace `raahul_biswas.png` with your own.
 - **Theme Customization:** Modify `styles.css` to adjust colors, fonts, and layouts.
 - **Interactive Features:** Edit `script.js` to change animations or add new interactions.
 
