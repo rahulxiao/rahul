@@ -13,7 +13,7 @@
 <body>
     <header>
         <nav>
-            <div class="logo">XIAO</div>
+            <div class="logo">rAHUL</div>
             <div class="nav-links">
                 <a href="#home"> Home</a>
                 <a href="#about"> About</a>
@@ -163,7 +163,40 @@
         </div>
         <div class="project-item">
             <i class="fas fa-folder folder-icon"></i>
-            <a href="https://example.com/travel-management" target="_blank" class="external-link">
+            <a href="https://github.com/rahulxiao/Arcade3in1" target="_blank" class="external-link">
+                <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+            <div>
+                <h3>Arcade3in1 - OpenGL Game Collection</h3>
+                <p>Academic Project (2024). A multi-game arcade application built using C++ and OpenGL. The project features three classic games: Pacman, Breakout, and Xiao Agent. Designed a user-friendly menu, game logic, and smooth animations.</p>
+                <p class="tech-stack">C++  OpenGL</p>
+            </div>
+        </div>
+        <div class="project-item">
+            <i class="fas fa-folder folder-icon"></i>
+            <a href="https://rahulxiao.onrender.com/" target="_blank" class="external-link">
+                <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+            <div>
+                <h3>Personal Portfolio Website</h3>
+                <p>A modern and interactive portfolio website showcasing my projects, skills, and experience. Features a sleek UI, smooth animations, and a responsive design. Includes sections for about me, projects, skills, and contact.</p>
+                <p class="tech-stack">HTML  CSS  JavaScript</p>
+            </div>
+        </div>
+        <div class="project-item">
+            <i class="fas fa-folder folder-icon"></i>
+            <a href="https://playwithword.onrender.com/" target="_blank" class="external-link">
+                <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+            <div>
+                <h3>Guess the Word - Vocabulary Challenge</h3>
+                <p>An interactive word-guessing game designed to test and improve vocabulary skills. Features multiple difficulty levels, dynamic word generation, and a user-friendly interface. Players can contribute new words and hints to expand the game's database.</p>
+                <p class="tech-stack">HTML  CSS  JavaScript</p>
+            </div>
+        </div>                
+        <div class="project-item">
+            <i class="fas fa-folder folder-icon"></i>
+            <a href="https://github.com/rahulxiao/Multi-Model-Travel-Management-System" target="_blank" class="external-link">
                 <i class="fas fa-arrow-up-right-from-square"></i>
             </a>
             <div>
@@ -172,19 +205,55 @@
                 <p class="tech-stack">PL/SQL  Oracle 10g</p>
             </div>
         </div>
-        <div class="project-item">
-            <i class="fas fa-folder folder-icon"></i>
-            <a href="https://example.com/echo-car-dealership" target="_blank" class="external-link">
-                <i class="fas fa-arrow-up-right-from-square"></i>
-            </a>
-            <div>
-                <h3>Echo Car Dealership with Chat System</h3>
-                <p>Academic Project (Summer 2023 – 2024). Desktop Application project using C#, .NET, and VS Code 2022. I developed database functions for inventory and customer management, created user-friendly WinForms interfaces, and improved data accuracy for tracking.</p>
-                <p class="tech-stack">C#  .NET  VS Code 2022</p>
+
+        <!-- Extra projects hidden initially -->
+        <div class="extra-projects" style="display: none;">
+            <div class="project-item">
+                <i class="fas fa-folder folder-icon"></i>
+                <a href="" target="_blank" class="external-link">
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+                <div>
+                    <h3>Echo Car Dealership with Chat System</h3>
+                    <p>Academic Project (Summer 2023 – 2024). Desktop Application project using C#, .NET, and VS Code 2022. I developed database functions for inventory and customer management, created user-friendly WinForms interfaces, and improved data accuracy for tracking.</p>
+                    <p class="tech-stack">C#  .NET  VS Code 2022</p>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- Show More/Less Button with fixed bottom position -->
+    <div class="button-container">
+        <button id="toggle-projects" class="show-more-btn">Show More</button>
+    </div>
 </div>
+
+<!-- CSS for proper button positioning -->
+<style>
+    .button-container {
+        display: flex;
+        justify-content: center; /* Centers the button */
+        align-items: center;
+        margin-top: 20px; /* Space from the last project */
+        padding-bottom: 30px; /* Ensures the button stays at the bottom */
+    }
+
+    .show-more-btn {
+        background-color: #365b831c;
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .show-more-btn:hover {
+        background-color: #39516b6c;
+    }
+</style>
+
     <!-- Experience -->
 <div class="experience" id="experience">
     <h2><i class="fas fa-briefcase"></i> Experience</h2>
@@ -200,20 +269,26 @@
     </div>
 </div>
 
-<!-- Hobbies -->
-<div class="hobies">
-    <h2><i class="fas fa-gamepad"></i> Hobbies</h2>
-    <p><i class="fas fa-dice"></i> Playing Video Games</p>
-    <p><i class="fas fa-book"></i> Listening Stories</p>
-    <p><i class="fas fa-music"></i> Listening to Music</p>
+<div class="hobbies-contact-container">
+    <!-- Hobbies Section -->
+    <div class="hobies">
+        <h2><i class="fas fa-gamepad"></i> Hobbies</h2>
+        <p><i class="fas fa-dice"></i> Playing Video Games</p>
+        <p><i class="fas fa-book"></i> Listening Stories</p>
+        <p><i class="fas fa-music"></i> Listening to Music</p>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact" id="contact">
+        <h2><i class="fas fa-address-book"></i> Contact</h2>
+        <p><i class="fas fa-envelope"></i> Email: rahulbiswasaiub@gmail.com</p>
+        <p><i class="fas fa-phone"></i> Phone: +880 1735355511</p>
+        <p><i class="fas fa-globe"></i> Website: <a href="https://rahulxiao.onrender.com/" target="_blank">rahulxiao.onrender.com</a></p>
+    </div>
 </div>
 
-<!-- Contact -->
-<div class="contact" id="contact">
-    <h2><i class="fas fa-address-book"></i> Contact</h2>
-    <p><i class="fas fa-envelope"></i> Email: rahulbiswasaiub@gmail.com</p>
-    <p><i class="fas fa-phone"></i> Phone: +880 1735355511</p>
-</div>
+
+
 
 <!-- Send a Message -->
     <section class="contact-form" id="contact-form">

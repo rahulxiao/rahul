@@ -600,47 +600,74 @@ nav {
     color: #94a3b8;
 }
 
-/* Hobbies Section */
-.hobies {
-    padding: 80px 50px;
-    background: #0f172a;
-    margin: 40px auto;
-    max-width: 1200px;
+/* Parent container for Hobbies and Contact */
+.hobbies-contact-container {
+    display: flex;
+    justify-content: space-between; /* Space between hobbies and contact */
+    align-items: flex-start; /* Align at the top */
+    gap: 40px; /* Space between sections */
+    max-width: 1200px; /* Adjust width */
+    margin: 40px auto; /* Center it */
+    padding: 20px;
 }
 
-.hobies p {
+/* Common styles for both sections */
+.hobies, .contact {
+    flex: 1; /* Equal width */
+    background: #0f172a; /* Default background */
+    padding: 40px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect: Slight lift and background color change */
+.hobies:hover, .contact:hover {
+    transform: translateY(-5px); /* Moves up slightly */
+    background: #1e293b; /* Darker background on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increase shadow for depth */
+}
+
+/* Section headings */
+.hobies h2, .contact h2 {
+    color: #22d3ee;
+    margin-bottom: 15px;
+}
+
+/* Icons and text formatting */
+.hobies p, .contact p {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 15px; /* Space between icon and text */
     margin: 15px 0;
     color: #94a3b8;
+    transition: color 0.3s ease; /* Smooth text color transition */
 }
 
-.hobies p i {
+/* Font Awesome icons */
+.hobies i, .contact i {
     font-size: 1.5em;
     color: #22d3ee;
+    transition: color 0.3s ease;
 }
 
-/* Contact Section */
-.contact {
-    padding: 80px 50px;
-    background: #0f172a;
-    margin: 40px auto;
-    max-width: 1200px;
+/* Hover effect on text and icons */
+.hobies:hover p, .contact:hover p {
+    color: #e2e8f0; /* Lighten text on hover */
 }
 
-.contact p {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin: 15px 0;
-    color: #94a3b8;
+.hobies:hover i, .contact:hover i {
+    color: #38bdf8; /* Change icon color on hover */
 }
 
-.contact p i {
-    font-size: 1.5em;
-    color: #22d3ee;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hobbies-contact-container {
+        flex-direction: column; /* Stack on small screens */
+        gap: 20px;
+    }
 }
+
 
 /* Send a Message (Contact Form) */
 .contact-form {
