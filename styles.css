@@ -3,14 +3,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', 'Poppins', sans-serif; /* Modern font */
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
 }
 
 body {
-    background: #0f172a; /* Darker blue background */
-    color: #e2e8f0; /* Light gray text */
+    background: #0f172a;
+    color: #e2e8f0;
     line-height: 1.6;
     overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 100vh;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Header and Navigation */
@@ -37,26 +50,38 @@ nav {
 
 .logo {
     font-size: 1.5em;
-    color: #22d3ee; /* Cyan accent */
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
+    color: #22d3ee;
 }
 
 .nav-links a {
     color: #a0a0a0;
     text-decoration: none;
-    margin-left: 30px; /* Slightly reduced spacing */
-    font-weight: 400; /* Lighter font weight */
-    font-size: 0.9em; /* Smaller font size */
+    margin-left: 30px;
+    font-weight: 400;
+    font-size: 0.9em;
+    position: relative;
     transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Adjusts distance from text */
+    width: 0%;
+    height: 2px;
+    background: #00ffcc;
+    transition: width 0.3s ease-in-out;
 }
 
 .nav-links a:hover {
     color: #00ffcc;
 }
+
+.nav-links a:hover::after {
+    width: 100%; /* Expands underline on hover */
+}
+
 
 .banner-resume-btn {
     background: transparent;
@@ -71,10 +96,22 @@ nav {
 }
 
 .banner-resume-btn:hover {
-    background: #22d3ee;
+    background: #3b565a5d;
     color: #0f172a;
 }
+/* Vertical Email Link on the Right */
+.mail-line {
+    position: fixed;
+    right: 40px; /* Distance from the right edge of the viewport */
+    bottom: 60px; /* Distance from the bottom edge of the viewport */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center the items horizontally */
+    z-index: 1000; /* Ensure the email link is on top of other elements */
+}
 
+
+/* Social Links */
 .social-links a {
     position: relative;
     display: inline-block;
@@ -82,6 +119,7 @@ nav {
     transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
     color: #fdfdfd; /* Default color */
     margin-left: 20px; /* Increased spacing */
+    padding-top: 10px; /* Vertical padding */
 }
 
 .social-links a:hover {
@@ -106,89 +144,167 @@ nav {
     width: 110%;
     left: -5%;
 }
+/* Email button container */
+.mail-btn {
+    color: #94a3b8; /* Default color for the email link */
+    font-size: 1.2em; /* Size of the email text */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+    text-decoration: none; /* Remove underlines */
+    display: flex;
+    flex-direction: column-reverse; /* Stack the text on top of the icon */
+    justify-content: center; /* Center the content */
+    align-items: center; /* Align items horizontally */
+    gap: 10px; /* Space between the text and the icon */
+}
 
+/* Rotate the email text to be vertical (90 degrees) */
+.mail {
+    margin: 110px 0; /* Adjust vertical spacing */
+    white-space: nowrap; /* Prevent text from wrapping */
+    transform: rotate(90deg); /* Rotate the text 90 degrees */
+    transform-origin: center; /* Rotate from the center */
+    display: inline-block; /* Ensure the text stays inline */
+    font-size: 14px; /* Adjust font size for better readability */
+    letter-spacing: 3px; /* Increase spacing between letters */
+}
 
-/* Vertical Social Links */
+/* Email Icon Styling */
+.mail-btn i {
+    font-size: 1.5em; /* Adjust icon size */
+    color: #94a3b8; /* Default color */
+}
+
+/* Hover effect */
+.mail-btn:hover {
+    color: #22d3ee; /* Color change on hover */
+    transform: translateY(-5px); /* Small upward movement */
+}
+
+/* Vertical line after the email link */
+.mail-line::after {
+    content: '';
+    display: block;
+    width: 1px; /* Width of the line */
+    height: 150px; /* Increased height to make the line bigger */
+    margin-top: 10px;
+    background-color: #94a3b8; /* Line color */
+}
+
+/* Vertical Social Links on the Left */
 .vertical-social-links {
     position: fixed;
-    left: 40px;
-    bottom: 60px;
+    left: 150px; /* Distance from the left edge of the viewport */
+    bottom: 60px; /* Distance from the bottom edge of the viewport */
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    z-index: 1000;
+    flex-direction: column; /* Stack icons vertically */
+    align-items: center; /* Center align */
+    gap: 20px; /* Space between social icons */
+    z-index: 1000; /* Ensure visibility over other elements */
 }
 
+/* Social Icons */
 .vertical-social-links a {
-    color: #94a3b8;
-    font-size: 1.2em;
-    transition: color 0.3s ease, transform 0.3s ease;
+    color: #94a3b8; /* Default icon color */
+    font-size: 1.5em; /* Icon size */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+    text-decoration: none; /* Remove underlines */
+    display: flex;
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center; /* Center align text and icon */
 }
 
+/* Rotate the text to be vertical (90 degrees) */
+.vertical-social-links .social-text {
+    margin: 0;
+    white-space: nowrap; /* Prevent text from wrapping */
+    transform: rotate(90deg); /* Rotate the text 90 degrees */
+    transform-origin: center; /* Keep rotation balanced */
+    display: inline-block; /* Ensure text stays inline */
+    font-size: 14px; /* Adjust font size */
+    letter-spacing: 3px; /* Space out letters */
+}
+
+/* Hover Effect */
 .vertical-social-links a:hover {
-    color: #22d3ee;
-    transform: translateY(-5px);
+    color: #22d3ee; /* Color change on hover */
+    transform: translateY(-5px); /* Slight upward movement */
+}
+
+/* Vertical Line starting from the last social icon */
+.vertical-social-links::after {
+    content: '';
+    display: block;
+    width: 1px; /* Width of the line */
+    height: 150px; /* Make the line longer */;
+    background-color: #94a3b8; /* Line color */
+    margin-top: 10%; /* Remove any extra margin */
 }
 
 /* Banner Section */
 .banner {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    flex-direction: column;
     background: #0f172a;
-    position: relative;
-    overflow: hidden;
-    padding: 0 50px;
+    text-align: left;
+    padding: 50px 350px; /* Adjust left/right and top/bottom padding */
 }
 
+/* Container */
 .banner-container {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
-    height: 100vh;
     text-align: left;
+    width: 100%;
+    max-width: 1200px;
+    padding-left: 20px; /* Extra left padding if needed */
 }
 
 
-.banner-text {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 100px 0;
+/* Animation */
+.banner-content {
+    animation: fadeInUp 1s ease-out;
 }
 
-.banner-text .intro-text {
-    color: #00ffcc;
-    font-size: 1.2em;
-    font-weight: 400;
-    text-transform: uppercase;
+/* Small Heading */
+.banner-h1 {
+    font-size: 1em;
+    font-weight: 800;
+    color: #ffffff;
     letter-spacing: 2px;
-    margin-bottom: 12px;
-    opacity: 0.9;
+    margin-bottom: -40px;
 }
 
-.banner-text h1 {
-    font-size: 4.8em;
-    font-weight: 700;
-    color: #ccd6f6;
-    line-height: 1.2;
+/* Main Heading (No Glow) */
+.banner-title {
+    font-size: clamp(3em, 8vw, 4em);
+    font-weight: 800;
+    color: #00ffcc;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-shadow: none; 
 }
 
-.banner-text h2 {
-    font-size: 4.8em;
-    font-weight: 700;
+/* Subtitle */
+.banner-subtitle {
+    font-size: clamp(1.8em, 4vw, 2.5em);
+    font-weight: 600;
     color: #8892b0;
-    line-height: 1.2;
+    margin-bottom: 15px;
 }
 
-.banner-text p {
-    font-size: 1.2em;
-    font-weight: 400;
-    color: #8892b0;
-    max-width: 600px;
-    line-height: 1.5;
+/* Description */
+.banner-description {
+    font-size: 1.1em;
+    color: #94a3b8;
+    max-width: 700px;
+    margin-bottom: 30px;
+    line-height: 1.6;
 }
-
 
 .course-btn {
     display: inline-block;
@@ -266,16 +382,15 @@ nav {
     object-fit: cover;
     border: 3px solid #22d3ee;
     transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-    transform: rotate(-90deg); /* Rotates left 90 degrees */
+    transform: rotate(-90deg);
     box-shadow: 0 10px 25px rgba(34, 211, 238, 0.3);
 }
 
 .profile-image img:hover {
-    transform: rotate(-90deg) scale(1.1); /* Keeps rotation but scales up */
+    transform: rotate(-90deg) scale(1.1);
     box-shadow: 0 15px 35px rgba(34, 211, 238, 0.5);
-    border-color: #00ffa6; /* Changes border color on hover */
+    border-color: #00ffa6;
 }
-
 
 /* Education Section */
 .education {
@@ -588,6 +703,7 @@ footer {
     background: #0f172a;
     color: #94a3b8;
     font-size: 0.9em;
+    flex-shrink: 0;
 }
 
 /* General Styling */
@@ -657,21 +773,18 @@ h2 i {
 
     .banner {
         padding: 0 20px;
+        min-height: 80vh;
     }
 
-    .banner-text h1 {
-        font-size: 3em;
+    .banner-title {
+        font-size: clamp(2em, 6vw, 3.5em);
     }
 
-    .banner-text h2 {
-        font-size: 2.5em;
+    .banner-subtitle {
+        font-size: clamp(1.2em, 3vw, 2em);
     }
 
-    .banner-text .intro-text {
-        font-size: 1em;
-    }
-
-    .banner-text .description {
+    .banner-description {
         font-size: 0.9em;
     }
 
@@ -683,6 +796,7 @@ h2 i {
     .vertical-social-links {
         left: 10px;
         gap: 15px;
+        bottom: 40px;
     }
 
     .about-me {
