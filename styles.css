@@ -668,6 +668,73 @@ nav {
     }
 }
 
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    background: #0f172a; /* Dark theme background */
+    padding: 100px 20px;
+}
+
+/* Subtitle */
+.contact-section h4 {
+    font-size: 1em;
+    font-weight: 600;
+    color: #22d3ee; /* Neon blue */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* Main Heading */
+.contact-section h3 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #cbd5e1; /* Light grayish-blue */
+    margin-bottom: 15px;
+}
+
+/* Description */
+.contact-section p {
+    font-size: 1.1em;
+    color: #94a3b8; /* Soft gray */
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+/* Contact Button */
+.contact-btn {
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 600;
+    color: #22d3ee; /* Neon blue text */
+    padding: 12px 30px;
+    border: 2px solid #22d3ee;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: #22d3ee;
+    color: #0f172a;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 60px 20px;
+    }
+    
+    .contact-section h3 {
+        font-size: 2em;
+    }
+
+    .contact-section p {
+        font-size: 1em;
+    }
+}
+
 
 /* Send a Message (Contact Form) */
 .contact-form {
