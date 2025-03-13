@@ -192,37 +192,40 @@ nav {
     background-color: #94a3b8;
 }
 
-/* Mobile Responsiveness */
+/* Mobile Responsiveness - Moves to Bottom Right */
 @media screen and (max-width: 768px) {
     .mail-line {
-        right: 20px; /* Adjust positioning for smaller screens */
-        bottom: 40px;
+        right: 10px; /* Move closer to the right edge */
+        bottom: 20px; /* Move closer to the bottom */
+        flex-direction: row; /* Change direction to horizontal */
     }
 
     .mail-btn {
         font-size: 1em; /* Reduce font size */
-        gap: 5px; /* Reduce spacing */
+        gap: 5px;
+        flex-direction: row; /* Change layout to horizontal */
     }
 
     .mail {
-        font-size: 12px; /* Make the email text smaller */
-        letter-spacing: 2px; /* Adjust spacing */
-        margin: 90px 0; /* Adjust margin */
+        transform: rotate(0deg); /* Remove rotation */
+        font-size: 12px; /* Adjust text size */
+        letter-spacing: 2px;
+        margin: 0; /* Reset margin */
     }
 
     .mail-btn i {
-        font-size: 1.2em; /* Reduce icon size */
+        font-size: 1.2em;
     }
 
     .mail-line::after {
-        height: 100px; /* Reduce the vertical line height */
+        height: 0; /* Remove the vertical line */
     }
 }
 
 @media screen and (max-width: 480px) {
     .mail-line {
-        right: 10px;
-        bottom: 30px;
+        right: 5px;
+        bottom: 10px;
     }
 
     .mail-btn {
@@ -233,17 +236,13 @@ nav {
     .mail {
         font-size: 10px;
         letter-spacing: 1.5px;
-        margin: 70px 0;
     }
 
     .mail-btn i {
         font-size: 1em;
     }
-
-    .mail-line::after {
-        height: 80px;
-    }
 }
+
 
 /* Vertical Social Links on the Left */
 .vertical-social-links {
