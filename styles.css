@@ -350,6 +350,15 @@ nav {
     color: #8892b0;
     margin-bottom: 15px;
 }
+#element {
+    font-size: clamp(1.8rem, 4vw, 2.5rem); /* Use rem for better scaling */
+    font-weight: 600;
+    color: #fa85b2;
+    margin-top: -40px;
+    display: inline-block; /* Ensures proper inline behavior */
+    white-space: nowrap; /* Prevents line breaks in the animation */
+}
+
 
 /* Description */
 .banner-description {
@@ -359,6 +368,7 @@ nav {
     margin-bottom: 30px;
     line-height: 1.6;
 }
+
 
 .course-btn {
     display: inline-block;

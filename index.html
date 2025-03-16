@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rahul Biswas</title>
@@ -42,7 +42,7 @@
         <div class="banner-content">
             <h3 class="banner-h1">Hi, my name is</h3><br>
             <h1 class="banner-title">Rahul Biswas</h1>
-            <p class="banner-subtitle">I Build Games</p>
+            <p class="banner-subtitle">I am a <span id="element"></span></p>
             <p class="banner-description">I primarily work on 3D games, but I also develop 2D games, exploring different styles and mechanics. In addition, I work with web technologies, building interactive and user-friendly web experiences.</p>
             <a href="#projects" class="course-btn">Explore My Work</a>
         </div>
@@ -326,6 +326,18 @@
         <p>&copy; 2025 Rahul Biswas</p>
     </footer>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed('#element', {
+        strings: ['Game Developer.', 'Problem Solver.', 'Gamer','UI/UX Designer.', 'Game Mechanics Tinkerer.'],
+        typeSpeed: 50,
+        backSpeed: 25, // Controls the speed at which text is deleted
+        loop: true // Enables continuous looping
+      });
+    </script>
+    
 </body>
 
 </html>

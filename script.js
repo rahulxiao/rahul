@@ -24,4 +24,3 @@
             this.textContent = "Show More";
         }
     });
-    
